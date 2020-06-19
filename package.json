@@ -1,0 +1,45 @@
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build:style": "gulp --gulpfile build/gen-style.js",
+    "build:component": "webpack --config build/webpack.component.js",
+    "build:prod": "webpack --config build/webpack.prod.js",
+    "lib": "npm run build:prod && npm run build:component && npm run build:style",
+    "dev": "webpack-dev-server --config build/webpack.demo.js"
+  },
+  "keywords": [],
+  "author": "",
+  "description": "",
+  "devDependencies": {
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
+    "ant-design-vue": "^1.6.2",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^3.6.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-less": "^4.0.1",
+    "gulp-rename": "^2.0.0",
+    "html-webpack-plugin": "^4.3.0",
+    "less-loader": "^6.1.1",
+    "style-loader": "^1.2.1",
+    "url-loader": "^4.1.0",
+    "vue-loader": "^15.9.2",
+    "vue-template-compiler": "^2.6.11",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^4.2.2",
+    "webpackbar": "^4.0.0"
+  },
+  "peerDependencies": {
+    "vue": "^2.6.11"
+  }
+}
