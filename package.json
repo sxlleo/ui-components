@@ -11,7 +11,11 @@
     "build:component": "webpack --config build/webpack.component.js",
     "build:prod": "webpack --config build/webpack.prod.js",
     "lib": "npm run build:prod && npm run build:component && npm run build:style",
-    "dev": "webpack-dev-server --config build/webpack.demo.js"
+    "dev": "webpack-dev-server --config build/webpack.demo.js",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "deploy": "gh-pages -d docs/.vuepress/dist",
+    "deploy:build": "npm run docs:build && npm run deploy"
   },
   "keywords": [],
   "author": "",
@@ -22,6 +26,7 @@
     "ant-design-vue": "^1.6.2",
     "babel-loader": "^8.1.0",
     "css-loader": "^3.6.0",
+    "gh-pages": "^3.0.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-clean-css": "^4.3.0",
@@ -33,6 +38,7 @@
     "url-loader": "^4.1.0",
     "vue-loader": "^15.9.2",
     "vue-template-compiler": "^2.6.11",
+    "vuepress": "^1.5.2",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.11.0",
