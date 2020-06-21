@@ -1,6 +1,6 @@
-import Link from './index.vue';
+import Link from "./index.vue";
 
-Link.install = function (Vue) {
+Link.install = function(Vue) {
   Vue.component(Link.name, Link);
 };
 
