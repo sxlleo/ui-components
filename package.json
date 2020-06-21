@@ -7,6 +7,7 @@
   ],
   "license": "MIT",
   "scripts": {
+    "prepublish": "npm run lib",
     "build:style": "gulp --gulpfile build/gen-style.js",
     "build:component": "webpack --config build/webpack.component.js",
     "build:prod": "webpack --config build/webpack.prod.js",
