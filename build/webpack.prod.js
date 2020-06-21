@@ -5,7 +5,7 @@ const webpackBaseConfig = require('./webpack.base.js');
 module.exports = merge(webpackBaseConfig, {
   mode: "production",
   entry: {
-    main: path.resolve(__dirname, '../src/packages/index.js'),
+    main: path.resolve(__dirname, '../src/index.js'),
   },
   output: {
     path: path.resolve(__dirname, '../lib'),
